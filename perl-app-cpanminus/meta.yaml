@@ -1,0 +1,13 @@
+package:
+  name: perl-app-cpanminus
+  version: 1.7044
+
+source:
+  url: http://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7044.tar.gz
+
+requirements:
+  build:
+     - perl
+  run:
+     - perl
+
