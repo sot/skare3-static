@@ -1,0 +1,23 @@
+package:
+  name: perl-extutils-f77
+  version: 1.20
+
+source:
+# The source section specifies where the source code of the package is coming
+# from, it may be coming from a source tarball like:
+  url: https://cpan.metacpan.org/authors/id/C/CH/CHM/ExtUtils-F77-1.20.tar.gz
+
+
+requirements:
+   build:
+      - perl ==5.18.2
+      - gcc [linux] 
+      - libgcc [linux]
+   run:
+      - perl ==5.18.2
+      - libgcc [linux]
+
+build:
+   number: 0
+   
+
