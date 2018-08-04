@@ -1,0 +1,25 @@
+package:
+  name: perl
+  version: 5.26.2
+
+source:
+  url: https://www.cpan.org/src/5.0/perl-5.26.2.tar.bz2
+  md5: 4d20674b57a2fd42f7b595a66fdc7048
+
+requirements:
+  build:
+    - pkg-config
+    - gcc ==4.8.5 [linux]
+    - libgcc ==4.8.5 [linux]
+  run:
+    - pkg-config
+    - libgcc ==4.8.5 [linux]
+
+
+test:
+  commands:
+     - perl -V
+
+build:
+   number: 0
+     

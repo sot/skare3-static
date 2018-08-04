@@ -16,7 +16,7 @@ args = parser.parse_args()
 all_pkgs = ['cfitsio',
 	'pgplot',
 	'xtime',
-	'perl_5.28',
+	'perl_5.26',
         'perl-extutils-f77',
         'perl-app-cpanminus',
         'perl-core-deps',
@@ -44,4 +44,4 @@ else:
    
 for pkg in pkgs:
    subprocess.check_call(["conda", "build", "--old-build-string", "--skip-existing",
-                          "--perl", "5.28.0", "--croot", build_dir, pkg])
+                          "--perl", "5.26.2", "--croot", build_dir, pkg])
