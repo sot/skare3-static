@@ -8,6 +8,7 @@ source:
 requirements:
   build:
    - perl
+   - perl-extutils-f77
    - perl-app-cpanminus
    - pkg-config
    - libpng
@@ -20,7 +21,8 @@ requirements:
    - gcc ==4.8.5 [linux]
    - libgcc ==4.8.5 [linux]
    - libgfortran [linux]
-  run:
+   - python
+run:
    - perl
    - perl-app-cpanminus
    - pkg-config
@@ -33,7 +35,7 @@ requirements:
    - openblas
    - libgcc ==4.8.5 [linux]
    - libgfortran [linux]
-
+   - python
 
 build:
    number: 0
