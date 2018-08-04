@@ -1,0 +1,25 @@
+package:
+  name: perl
+  version: 5.28.0
+
+source:
+  url: https://www.cpan.org/src/5.0/perl-5.28.0.tar.gz
+  md5: c7c63781745e280e08401a306a83bfb8
+
+requirements:
+  build:
+    - pkg-config
+    - gcc ==4.8.5 [linux]
+    - libgcc ==4.8.5 [linux]
+  run:
+    - pkg-config
+    - libgcc ==4.8.5 [linux]
+
+
+test:
+  commands:
+     - perl -V
+
+build:
+   number: 0
+     
