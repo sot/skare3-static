@@ -8,6 +8,7 @@ export OPENSSL_PREFIX=${PREFIX}
 
 CPANM="cpanm --from ${SRC_DIR} --mirror-index ${SRC_DIR}/modules/02packages.details.txt --self-contained "
 #CPANM="cpanm --mirror-index /tmp/mconda3/cpan/modules/02packages.details.txt --self-contained --save-dists /tmp/mconda3/cpan  "
+${CPANM} Module::Install
 ${CPANM} ExtUtils::PkgConfig
 ${CPANM} ExtUtils::MakeMaker
 ${CPANM} File::Spec
@@ -25,10 +26,9 @@ ${CPANM} --installdeps Inline::C
 ${CPANM} Inline::C --notest
 ${CPANM} Inline::Python
 ${CPANM} Test::Simple
-${CPANM} Astro::FITS::CFITSIO
-${CPANM} Astro::FITS::Header
 ${CPANM} Convert::UU
 ${CPANM} File::Map
+${CPANM} List::MoreUtils::XS
 ${CPANM} List::MoreUtils
 ${CPANM} Module::Compile
 ${CPANM} Test::Deep
@@ -36,11 +36,6 @@ ${CPANM} Test::Exception
 ${CPANM} Test::Warn
 ${CPANM} --installdeps Tk
 ${CPANM} Tk --notest
-${CPANM} PDL --notest
-
-${CPANM} Astro::FITS::CFITSIO::CheckStatus
-${CPANM} Astro::FITS::CFITSIO::Simple
-
 
 ${CPANM} URI
 ${CPANM} Net::SSLeay
@@ -76,16 +71,17 @@ ${CPANM} IO::Compress::Base
 ${CPANM} IO::Compress::Zlib::Constants
 ${CPANM} Compress::Zlib
 ${CPANM} Archive::Zip
-${CPANM} List::MoreUtils
 ${CPANM} Tie::IxHash
 ${CPANM} Clone
-${CPANM} Class::MakeMethods
+${CPANM} Class::MakeMethods --installdeps
+${CPANM} Class::MakeMethods --notest
+
 ${CPANM} Class::Accessor
 ${CPANM} Config::General
 ${CPANM} Hash::Merge
 ${CPANM} YAML
 ${CPANM} Expect
-${CPANM} Expect::Simple
+${CPANM} Expect::Simple --notest
 ${CPANM} Params::Validate
 ${CPANM} Env::Path
 ${CPANM} Time::JulianDay
@@ -105,7 +101,6 @@ ${CPANM} HTML::Table
 ${CPANM} IO::Stringy
 ${CPANM} Decision::Depends
 ${CPANM} Regexp::Common
-${CPANM} --installdeps Tk
 ${CPANM} Date::Tie
 ${CPANM} Pod::Usage
 ${CPANM} Pod::Help
@@ -113,11 +108,11 @@ ${CPANM} Time::Out
 ${CPANM} --installdeps Shell::GetEnv
 ${CPANM} Shell::GetEnv --notest
 ${CPANM} Module::Find
-${CPANM} IPC::System::Simple
+${CPANM} IPC::System::Simple --notest
 ${CPANM} Capture::Tiny
 ${CPANM} Config::PFiles::Path
 ${CPANM} App::Env
-${CPANM} Schedule::Cron
+${CPANM} Schedule::Cron --notest
 ${CPANM} HTML::TreeBuilder
 ${CPANM} Text::RecordParser
 ${CPANM} POSIX::strptime
@@ -127,6 +122,15 @@ ${CPANM} Text::FixedLength
 ${CPANM} Date::Parse
 ${CPANM} Font::AFM
 ${CPANM} HTML::FormatText
+${CPANM} Module::Install
+
+${CPANM} Astro::FITS::CFITSIO
+${CPANM} Astro::FITS::Header
+${CPANM} PDL --notest  
+${CPANM} Astro::FITS::CFITSIO::CheckStatus
+${CPANM} Astro::FITS::CFITSIO::Simple
+
+
 
 
 

@@ -1,9 +1,9 @@
 package:
   name: perl-core-deps
-  version: 0.1
+  version: 0.2
 
 source:
-  url:  file:///proj/sot/ska/pkgs/cpan-core-0.1.tar.gz
+  url:  file:///proj/sot/ska/pkgs/cpan-core-0.2.tar.gz
 
 requirements:
   build:
