@@ -10,11 +10,11 @@ source:
 
 requirements:
    build:
-      - perl ==5.28
+      - perl ==5.26.2
       - gcc [linux] 
       - libgcc [linux]
    run:
-      - perl ==5.28
+      - perl ==5.26.2
       - libgcc [linux]
 
 build:
