@@ -13,34 +13,27 @@ parser.add_argument("--build-root", default=".", type=str,
                          "Default: '.'")
 args = parser.parse_args()
 
+all_pkgs = ['cfitsio',
+            'pgplot',
+            'xtime',
+            'perl_5.26',
+            'perl-extutils-f77',
+            'perl-app-cpanminus',
+            'perl-core-deps',
+            'perl-pgplot',
+            'perl-chandra-time',
+            'perl-ska-convert',
+            'perl-cxc-sysarch',
+            'perl-app-env-ascds',
+            'perl-ska-agasc']
+
+
 if os.uname().sysname == 'Darwin':
    # Not sure if this is really being used by the compiler, but ...
    os.environ["MACOSX_DEPLOYMENT_TARGET"] = "10.9"
-   all_pkgs = ['cfitsio',
-               'xtime',
-               'perl_5.26_osx',
-               'perl-extutils-f77',
-               'perl-app-cpanminus',
-               'perl-core-deps',
-               'perl-chandra-time',
-               'perl-ska-convert',
-               'perl-cxc-sysarch',
-               'perl-app-env-ascds',
-               'perl-ska-agasc']
-else:
-   all_pkgs = ['cfitsio',
-               'pgplot',
-               'xtime',
-               'perl_5.26_linux',
-               'perl-extutils-f77',
-               'perl-app-cpanminus',
-               'perl-core-deps',
-               'perl-pgplot',
-               'perl-chandra-time',
-               'perl-ska-convert',
-               'perl-cxc-sysarch',
-               'perl-app-env-ascds',
-               'perl-ska-agasc']
+   all_pkgs.remove('pgplot')
+   all_pkgs.remove('perl-pgplot')
+
 
 build_dir = os.path.join(args.build_root, "builds")
 
