@@ -1,9 +1,10 @@
 #!/bin/bash
 
-chmod +x ${RECIPE_DIR}/sysarch
-chmod +x ${RECIPE_DIR}/syspathsubst
 cp -a ${RECIPE_DIR}/sysarch ${PREFIX}/bin
 cp -a ${RECIPE_DIR}/syspathsubst ${PREFIX}/bin
+chmod +x ${PREFIX}/bin/sysarch
+chmod +x ${PREFIX}/bin/syspathsubst
+
 
 
 # If it has Build.PL use that, otherwise use Makefile.PL
