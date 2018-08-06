@@ -126,7 +126,6 @@ ${CPANM} HTML::FormatText
 ${CPANM} Module::Install
 ${CPANM} DBI
 ${CPANM} DBD::SQLite
-${CPANM} DBD::mysql
 ${CPANM} Astro::FITS::CFITSIO
 ${CPANM} Astro::FITS::Header
 ${CPANM} PDL --notest
