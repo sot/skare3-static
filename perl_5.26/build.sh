@@ -13,7 +13,7 @@ if [ `uname` == Darwin ]; then
         -Dsiteman3dir="${PREFIX}/share/man/man3" \
         -A prepend:ldflags=" -headerpad_max_install_names -L${PREFIX}/lib " \
 	-A prepend:lddlflags=" -headerpad_max_install_names -L${PREFIX}/lib " \
-        -A prepend:cflags=" -I${PREFIX}/include " \
+        -A prepend:cflags=" -I${PREFIX}/include "
 else
     ./Configure -des \
         -Dprefix="${PREFIX}" \
