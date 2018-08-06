@@ -25,7 +25,8 @@ all_pkgs = ['cfitsio',
             'perl-ska-convert',
             'perl-cxc-sysarch',
             'perl-app-env-ascds',
-            'perl-ska-agasc']
+            'perl-ska-agasc',
+            'perl-ska-classic']
 
 
 if os.uname().sysname == 'Darwin':
@@ -42,7 +43,7 @@ if args.package is None:
    pkgs = all_pkgs
 else:
    pkgs = [args.package]
-   
+
 for pkg in pkgs:
    subprocess.check_call(["conda", "build", "--old-build-string", "--skip-existing",
                           "--perl", "5.26.2", "--croot", build_dir, pkg])

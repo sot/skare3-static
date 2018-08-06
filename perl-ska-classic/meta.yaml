@@ -1,0 +1,13 @@
+package:
+  name: perl-ska-classic
+  version: 0.1
+
+source:
+  url: file:///proj/sot/ska/pkgs/skaclassic-0.1.tar.gz
+
+requirements:
+  build:
+    - perl
+  run:
+    - perl
+
