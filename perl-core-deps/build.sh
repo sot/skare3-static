@@ -22,7 +22,7 @@ ${CPANM} Term::ReadLine --notest
 
 ${CPANM} JSON::PP
 ${CPANM} Inline
-${CPANM} --installdeps Inline::C
+${CPANM} Inline::C --installdeps
 ${CPANM} Inline::C --notest
 ${CPANM} Inline::Python
 ${CPANM} Test::Simple
@@ -34,7 +34,7 @@ ${CPANM} Module::Compile
 ${CPANM} Test::Deep
 ${CPANM} Test::Exception
 ${CPANM} Test::Warn
-${CPANM} --installdeps Tk
+${CPANM} Tk --installdeps
 ${CPANM} Tk --notest
 
 ${CPANM} URI
@@ -105,9 +105,10 @@ ${CPANM} Date::Tie
 ${CPANM} Pod::Usage
 ${CPANM} Pod::Help
 ${CPANM} Time::Out
-${CPANM} --installdeps Shell::GetEnv
+${CPANM} Shell::GetEnv --installdeps
 ${CPANM} Shell::GetEnv --notest
 ${CPANM} Module::Find
+${CPANM} IPC::System::Simple --installdeps
 ${CPANM} IPC::System::Simple --notest
 ${CPANM} Capture::Tiny
 ${CPANM} Config::PFiles::Path
@@ -123,10 +124,12 @@ ${CPANM} Date::Parse
 ${CPANM} Font::AFM
 ${CPANM} HTML::FormatText
 ${CPANM} Module::Install
-
+${CPANM} DBI
+${CPANM} DBD::SQLite
+${CPANM} DBD::mysql
 ${CPANM} Astro::FITS::CFITSIO
 ${CPANM} Astro::FITS::Header
-${CPANM} PDL --notest  
+${CPANM} PDL --notest
 ${CPANM} Astro::FITS::CFITSIO::CheckStatus
 ${CPANM} Astro::FITS::CFITSIO::Simple
 
