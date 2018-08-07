@@ -26,7 +26,8 @@ all_pkgs = ['cfitsio',
             'perl-cxc-sysarch',
             'perl-app-env-ascds',
             'perl-ska-agasc',
-            'perl-ska-classic']
+            'perl-ska-classic',
+            'ska3-perl']
 
 
 if os.uname().sysname == 'Darwin':
