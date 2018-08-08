@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PERL_CPANM_HOME=/tmp/cpanm
+export PERL_CPANM_HOME=${PREFIX}/tmp/cpanm
 export PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
 export PGPLOT_DIR=${PREFIX}/lib
 export PYTHON_HOME=${PREFIX}
@@ -132,8 +132,8 @@ ${CPANM} PDL --notest
 ${CPANM} Astro::FITS::CFITSIO::CheckStatus
 ${CPANM} Astro::FITS::CFITSIO::Simple
 
-
-
+# Remove cpan work dirs
+rm -rf $PERL_CPANM_HOME
 
 
 
