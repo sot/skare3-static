@@ -1,0 +1,28 @@
+package:
+  name: perl-pgplot
+  version: 2.19
+
+source:
+# The source section specifies where the source code of the package is coming
+# from, it may be coming from a source tarball like:
+  url: file:///proj/sot/ska/pkgs/PGPLOT-2.19_patch.tar.gz
+
+requirements:
+   build:
+      - perl
+      - pgplot
+      - perl-core-deps
+      - perl-extutils-f77
+   run:
+      - perl
+      - pgplot
+      - perl-core-deps
+      - perl-extutils-f77
+
+test:
+  # Perl 'use' tests
+  imports:
+    - PGPLOT
+
+
+

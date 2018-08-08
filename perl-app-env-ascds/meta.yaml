@@ -1,0 +1,33 @@
+package:
+  name: perl-app-env-ascds
+  version: !!str 0.04
+
+source:
+  url: file:///proj/sot/ska/pkgs/App-Env-ASCDS-0.04_ska.tar.gz
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+
+requirements:
+  build:
+    - perl
+    - perl-core-deps
+    - perl-cxc-sysarch
+  run:
+    - perl
+    - perl-core-deps
+    - perl-cxc-sysarch
+
+#test:
+#  # Perl 'use' tests
+#  imports:
+#    - Ska::Convert
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+

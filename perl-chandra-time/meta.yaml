@@ -1,0 +1,33 @@
+package:
+  name: perl-chandra-time
+  version: !!str 0.9.2
+
+source:
+  url: file:///proj/sot/ska/pkgs/Chandra-Time-0.9.2.tar.gz
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+
+requirements:
+  build:
+    - perl
+    - perl-core-deps
+    - xtime
+  run:
+    - perl
+    - perl-core-deps
+    - xtime
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Chandra::Time
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+

@@ -1,0 +1,22 @@
+package:
+  name: xtime
+  version: 1.2.2
+
+source:
+# The source section specifies where the source code of the package is coming
+# from, it may be coming from a source tarball like:
+  url: file:///proj/sot/ska/pkgs/XTime-1.2.2.tar.gz
+
+requirements:
+  build:
+    - gcc ==4.8.5 [linux]
+    - libgcc ==4.8.5 [linux]
+  run:
+    - libgcc ==4.8.5 [linux]
+
+build:
+   number: 0
+
+
+
+
