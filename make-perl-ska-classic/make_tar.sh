@@ -40,8 +40,8 @@ tar -C /proj/sot/ska/lib/perl -cvpf libs.tar \
     Data/Password/Entry.pm \
     CFITSIO/Simple.pm
 
-mkdir -p skaclassic/libs
-cd skaclassic/libs
+mkdir -p skaclassic/lib
+cd skaclassic/lib
 tar -xvpf ../../libs.tar
 cd ../..
 tar -cvpf skaclassic-0.2.tar skaclassic
