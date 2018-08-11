@@ -8,7 +8,6 @@ tar -C /proj/sot/ska/lib/perl -cvpf libs.tar \
     Read_egse_par.pm \
     Tlm.pm \
     TEvent.pm \
-    PoorTextFormat.pm \
     Quat.pm \
     SysArch.pm \
     Ska/ACACoordConvert.pm \
@@ -45,7 +44,7 @@ mkdir -p skaclassic/libs
 cd skaclassic/libs
 tar -xvpf ../../libs.tar
 cd ../..
-tar -cvpf skaclassic-0.1.tar skaclassic
-gzip skaclassic-0.1.tar
+tar -cvpf skaclassic-0.2.tar skaclassic
+gzip skaclassic-0.2.tar
 
 
