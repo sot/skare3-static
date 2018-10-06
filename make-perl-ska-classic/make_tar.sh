@@ -46,7 +46,7 @@ cd ../..
 
 cp RDB.pm skaclassic/lib/Ska/RDB.pm
 
-tar -cvpf skaclassic-0.3.tar skaclassic
-gzip skaclassic-0.3.tar
+tar -cvpf skaclassic-0.4.tar skaclassic
+gzip skaclassic-0.4.tar
 
 
