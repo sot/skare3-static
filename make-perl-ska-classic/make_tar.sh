@@ -8,7 +8,6 @@ tar -C /proj/sot/ska/lib/perl -cvpf libs.tar \
     Read_egse_par.pm \
     Tlm.pm \
     TEvent.pm \
-    PoorTextFormat.pm \
     Quat.pm \
     SysArch.pm \
     Ska/ACACoordConvert.pm \
@@ -25,7 +24,6 @@ tar -C /proj/sot/ska/lib/perl -cvpf libs.tar \
     Ska/Obsid.pm \
     Ska/Parse_CM_File.pm \
     Ska/Process.pm \
-    Ska/RDB.pm \
     Ska/Report/TimeRange.pm \
     Ska/Run.pm \
     Ska/SQL/Select.pm \
@@ -41,11 +39,14 @@ tar -C /proj/sot/ska/lib/perl -cvpf libs.tar \
     Data/Password/Entry.pm \
     CFITSIO/Simple.pm
 
-mkdir -p skaclassic/libs
-cd skaclassic/libs
+mkdir -p skaclassic/lib
+cd skaclassic/lib
 tar -xvpf ../../libs.tar
 cd ../..
-tar -cvpf skaclassic-0.1.tar skaclassic
-gzip skaclassic-0.1.tar
+
+cp RDB.pm skaclassic/lib/Ska/RDB.pm
+
+tar -cvpf skaclassic-0.4.tar skaclassic
+gzip skaclassic-0.4.tar
 
 

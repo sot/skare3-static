@@ -1,0 +1,11 @@
+--- Makefile.PL	2014-08-24 12:15:15.000000000 -0400
++++ Makefile.p	2014-08-24 12:15:44.000000000 -0400
+@@ -393,7 +393,7 @@
+ 		delete( $x{$f} ) unless exists( $files{$file} );
+ 	}
+ 
+-	foreach my $f (qw(insck tli sdna dnet_stub tds skrb gss)) {
++	foreach my $f (qw(insck tli sdna dnet_stub tds skrb gss sybunic)) {
+ 		$x{"-l$f"} = 1 if exists $files{$f} && -f "$dir/$libdir/lib$f.$dlext";
+ 	}
+ 	if ( $version gt '11' ) {
