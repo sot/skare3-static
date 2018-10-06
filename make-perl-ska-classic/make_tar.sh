@@ -24,7 +24,6 @@ tar -C /proj/sot/ska/lib/perl -cvpf libs.tar \
     Ska/Obsid.pm \
     Ska/Parse_CM_File.pm \
     Ska/Process.pm \
-    Ska/RDB.pm \
     Ska/Report/TimeRange.pm \
     Ska/Run.pm \
     Ska/SQL/Select.pm \
@@ -44,7 +43,10 @@ mkdir -p skaclassic/lib
 cd skaclassic/lib
 tar -xvpf ../../libs.tar
 cd ../..
-tar -cvpf skaclassic-0.2.tar skaclassic
-gzip skaclassic-0.2.tar
+
+cp RDB.pm skaclassic/lib/Ska/RDB.pm
+
+tar -cvpf skaclassic-0.3.tar skaclassic
+gzip skaclassic-0.3.tar
 
 
