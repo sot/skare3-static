@@ -2,5 +2,5 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME => 'SkaClassic',
-    VERSION => "0.1",
+    VERSION => "0.4",
 );
