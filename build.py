@@ -27,7 +27,7 @@ all_pkgs = ['cfitsio',
             'perl-app-env-ascds',
             'perl-ska-agasc',
             'perl-ska-classic',
-            'ska3-perl']
+            'perl-dbd-sybase']
 
 
 if os.uname().sysname == 'Darwin':
@@ -35,7 +35,7 @@ if os.uname().sysname == 'Darwin':
    os.environ["MACOSX_DEPLOYMENT_TARGET"] = "10.9"
    all_pkgs.remove('pgplot')
    all_pkgs.remove('perl-pgplot')
-
+   all_pkgs.remove('perl-dbd-sybase')
 
 build_dir = os.path.join(args.build_root, "builds")
 
