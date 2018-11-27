@@ -5,19 +5,23 @@ package:
 source:
  url: file:///proj/sot/ska/pkgs/Ska-AGASC-3.5.0.tar.gz 
 
+build:
+ number: 1
+
 requirements:
   build:
     - perl
     - perl-core-deps
     - perl-chandra-time
     - perl-app-env-ascds
-    - perl-ska-convert
+    - perl-ska-classic
   run:
     - perl
     - perl-core-deps
     - perl-chandra-time
     - perl-app-env-ascds
-    - perl-ska-convert
+    - perl-ska-classic
+
 test:
   # Perl 'use' tests
   imports:

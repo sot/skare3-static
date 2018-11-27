@@ -16,7 +16,6 @@ tar -C /proj/sot/ska/lib/perl -cvpf libs.tar \
     Ska/AcqStatsQuery.pm \
     Ska/DatabaseUtil.pm \
     Ska/CatQuery.pm \
-    Ska/Convert.pm \
     Ska/Fetch.pm \
     Ska/HashTable.pm \
     Ska/IO.pm \
@@ -45,8 +44,9 @@ tar -xvpf ../../libs.tar
 cd ../..
 
 cp RDB.pm skaclassic/lib/Ska/RDB.pm
+cp Convert.pm skaclassic/lib/Ska/Convert.pm
 
-tar -cvpf skaclassic-0.4.tar skaclassic
-gzip skaclassic-0.4.tar
+tar -cvpf skaclassic-0.5.tar skaclassic
+gzip skaclassic-0.5.tar
 
 
