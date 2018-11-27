@@ -27,6 +27,7 @@ all_pkgs = ['cfitsio',
             'perl-app-env-ascds',
             'perl-ska-agasc',
             'perl-ska-classic',
+            'perl-ska-web',
             'perl-dbd-sybase']
 
 
