@@ -37,6 +37,10 @@ if os.uname().sysname == 'Darwin':
    all_pkgs.remove('perl-pgplot')
    all_pkgs.remove('perl-dbd-sybase')
 
+if os.uname().machine == 'i686':
+   print("Perl and other static packages not supported on 32bit")
+   exit(1)
+
 build_dir = os.path.join(args.build_root, "builds")
 
 # If a package is requested, do that, else everything.
