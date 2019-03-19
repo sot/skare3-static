@@ -13,13 +13,11 @@ requirements:
     - perl
     - perl-core-deps
     - perl-chandra-time
-    - perl-app-env-ascds
     - perl-ska-classic
   run:
     - perl
     - perl-core-deps
     - perl-chandra-time
-    - perl-app-env-ascds
     - perl-ska-classic
 
 test:
