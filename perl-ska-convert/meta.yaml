@@ -1,0 +1,36 @@
+package:
+  name: perl-ska-convert
+  version: !!str 4.3
+
+source:
+ url: file:///proj/sot/ska/pkgs/Ska-Convert-4.3.tar.gz 
+
+build:
+ number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-core-deps
+    - perl-chandra-time
+    - perl-app-env-ascds
+    - perl-ska-classic
+  run:
+    - perl
+    - perl-core-deps
+    - perl-chandra-time
+    - perl-app-env-ascds
+    - perl-ska-classic
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Ska::Convert
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
