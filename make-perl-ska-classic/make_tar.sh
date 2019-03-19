@@ -44,9 +44,8 @@ tar -xvpf ../../libs.tar
 cd ../..
 
 cp RDB.pm skaclassic/lib/Ska/RDB.pm
-cp Convert.pm skaclassic/lib/Ska/Convert.pm
 
-tar -cvpf skaclassic-0.5.tar skaclassic
-gzip skaclassic-0.5.tar
+tar -cvpf skaclassic-0.6.tar skaclassic
+gzip skaclassic-0.6.tar
 
 

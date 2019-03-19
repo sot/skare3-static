@@ -1,9 +1,9 @@
 package:
   name: perl-ska-classic
-  version: 0.5
+  version: 0.6
 
 source:
-  url: file:///proj/sot/ska/pkgs/skaclassic-0.5.tar.gz
+  url: file:///proj/sot/ska/pkgs/skaclassic-0.6.tar.gz
 
 requirements:
   build:
