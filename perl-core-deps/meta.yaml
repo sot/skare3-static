@@ -1,42 +1,48 @@
 package:
   name: perl-core-deps
-  version: 0.1
+  version: 0.2
 
 source:
-  url:  file:///proj/sot/ska/pkgs/cpan-core-0.1.tar.gz
+  url:  file:///proj/sot/ska/pkgs/cpan-core-0.2.tar.gz
 
+# On Linux, build seems to require conda-forge perl-5.26.2-h516909a_1006.tar.bz2,
+# 5.26.2 linux package from defaults seems broken as of 26-Jun-2020.
 requirements:
-  build:
-   - perl
-   - perl-extutils-f77
+  host:
+   - perl =5.26.2
    - perl-app-cpanminus
+   - expat
+   - clang_osx-64 # [osx]
+   - clangxx_osx-64 # [osx]
+   - libgcc-ng # [linux]
+   - libstdcxx-ng # [linux]
+   - gcc_linux-64 # [linux]
    - pkg-config
    - libpng
-   - cfitsio
-   - pgplot [linux]
    - xtime
    - gsl
    - openssl
    - openblas
-   - gcc ==4.8.5 [linux]
-   - libgcc ==4.8.5 [linux]
-   - libgfortran [linux]
    - python
-run:
+   - yaml
+   - zlib
+   - zip
+   - cfitsio
+  run:
    - perl
    - perl-app-cpanminus
    - pkg-config
    - libpng
-   - cfitsio
-   - pgplot [linux]
    - xtime
    - gsl
    - openssl
    - openblas
-   - libgcc ==4.8.5 [linux]
-   - libgfortran [linux]
    - python
-
+   - yaml
+   - expat
+   - zlib
+   - zip
+   - cfitsio
 build:
    number: 0
 

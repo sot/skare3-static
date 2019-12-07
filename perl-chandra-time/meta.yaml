@@ -12,14 +12,12 @@ source:
 
 requirements:
   host:
-    - gcc_linux-64
-    - gxx_linux-64
+    - clangxx_osx-64 # [osx]
+    - gxx_linux-64 # [linux]
     - perl
     - perl-core-deps
     - xtime
   run:
-    - gcc_linux-64
-    - gxx_linux-64
     - perl
     - perl-core-deps
     - xtime

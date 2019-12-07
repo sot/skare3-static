@@ -7,8 +7,8 @@ source:
 
 requirements:
   build:
-    - perl ==5.26.2
+    - perl
   run:
-    - perl ==5.26.2
+    - perl
     - perl-core-deps
     - chandra.time

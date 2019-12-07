@@ -21,6 +21,7 @@ requirements:
     - perl-chandra-time
     - perl-app-env-ascds
     - perl-ska-classic
+    - perl-ska-convert
 
 test:
   # Perl 'use' tests

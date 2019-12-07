@@ -22,6 +22,7 @@ all_pkgs = [
             'perl-chandra-time',
             'perl-cxc-sysarch',
             'perl-app-env-ascds',
+            'perl-ska-convert',
             'perl-ska-agasc',
             'perl-ska-web']
 

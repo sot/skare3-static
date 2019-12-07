@@ -8,8 +8,9 @@ source:
   url: file:///proj/sot/ska/pkgs/XTime-1.2.2.tar.gz
 
 requirements:
-  build:
-    - {{ compiler('cxx') }}
+   host:
+    - clangxx_osx-64 # [osx]
+    - gxx_linux-64 # [linux]
 
 build:
    number: 0
