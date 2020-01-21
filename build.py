@@ -7,48 +7,33 @@ import argparse
 parser = argparse.ArgumentParser(description="Build skare3 Perl packages.")
 
 parser.add_argument("package", type=str, nargs="?",
-                    help="Package to build.  All updated packages will be built if no package supplied")
+                    help="Package to build.  All updated packages will be"
+                         " built if no package supplied")
 parser.add_argument("--build-root", default=".", type=str,
                     help="Path to root directory for output conda build packages."
                          "Default: '.'")
 args = parser.parse_args()
 
-all_pkgs = ['cfitsio',
-            'pgplot',
+all_pkgs = [
             'xtime',
-            'perl_5.26',
-            'perl-extutils-f77',
             'perl-app-cpanminus',
             'perl-core-deps',
-            'perl-pgplot',
+            'perl-ska-classic',
             'perl-chandra-time',
             'perl-cxc-sysarch',
             'perl-app-env-ascds',
             'perl-ska-agasc',
-            'perl-ska-classic',
-            'perl-ska-web',
-            'perl-dbd-sybase']
+            'perl-ska-web']
 
-
-if os.uname().sysname == 'Darwin':
-   # Not sure if this is really being used by the compiler, but ...
-   os.environ["MACOSX_DEPLOYMENT_TARGET"] = "10.9"
-   all_pkgs.remove('pgplot')
-   all_pkgs.remove('perl-pgplot')
-   all_pkgs.remove('perl-dbd-sybase')
-
-if os.uname().machine == 'i686':
-   print("Perl and other static packages not supported on 32bit")
-   exit(1)
 
 build_dir = os.path.join(args.build_root, "builds")
 
 # If a package is requested, do that, else everything.
 if args.package is None:
-   pkgs = all_pkgs
+    pkgs = all_pkgs
 else:
-   pkgs = [args.package]
+    pkgs = [args.package]
 
 for pkg in pkgs:
-   subprocess.check_call(["conda", "build", "--old-build-string", "--skip-existing",
-                          "--perl", "5.26.2", "--croot", build_dir, pkg])
+    subprocess.check_call(["conda", "build", "--use-local",
+                           "--perl", "5.26.2", "--croot", build_dir, pkg])
