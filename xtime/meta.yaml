@@ -9,10 +9,7 @@ source:
 
 requirements:
   build:
-    - gcc ==4.8.5 [linux]
-    - libgcc ==4.8.5 [linux]
-  run:
-    - libgcc ==4.8.5 [linux]
+    - {{ compiler('cxx') }}
 
 build:
    number: 0
