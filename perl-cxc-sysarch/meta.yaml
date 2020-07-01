@@ -3,7 +3,7 @@ package:
   version: !!str 1.00
 
 source:
-  url: file:///proj/sot/ska/pkgs/CXC-SysArch-1.00.tar.gz
+  url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/CXC-SysArch-1.00.tar.gz
 #  patches:
    # List any patch files here
    # - fix.patch

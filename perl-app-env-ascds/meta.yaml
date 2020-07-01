@@ -3,7 +3,7 @@ package:
   version: !!str 0.04
 
 source:
-  url: file:///proj/sot/ska/pkgs/App-Env-ASCDS-0.04_ska.tar.gz
+  url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/App-Env-ASCDS-0.04_ska.tar.gz
 #  patches:
    # List any patch files here
    # - fix.patch

@@ -3,7 +3,7 @@ package:
   version: !!str 3.5.0
 
 source:
- url: file:///proj/sot/ska/pkgs/Ska-AGASC-3.5.0.tar.gz 
+ url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/Ska-AGASC-3.5.0.tar.gz
 
 build:
  number: 1

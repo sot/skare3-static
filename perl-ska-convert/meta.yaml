@@ -3,7 +3,7 @@ package:
   version: !!str 4.3
 
 source:
- url: file:///proj/sot/ska/pkgs/Ska-Convert-4.3.tar.gz 
+ url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/Ska-Convert-4.3.tar.gz
 
 build:
  number: 1
