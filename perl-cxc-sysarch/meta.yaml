@@ -10,13 +10,12 @@ source:
 
 
 requirements:
-  build:
+  host:
     - perl
-    - perl-core-deps
-
+    - perl-extended-deps
   run:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
 
 
 test:

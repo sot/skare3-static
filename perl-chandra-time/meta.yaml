@@ -12,14 +12,13 @@ source:
 
 requirements:
   host:
-    - clangxx_osx-64 # [osx]
-    - gxx_linux-64 # [linux]
+    - {{ compiler('cxx') }}
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - xtime
   run:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - xtime
 
 test:

@@ -9,14 +9,12 @@ build:
  number: 1
 
 requirements:
-  build:
+  host:
     - perl
-    - perl-core-deps
     - perl-chandra-time
     - perl-ska-classic
   run:
     - perl
-    - perl-core-deps
     - perl-chandra-time
     - perl-ska-classic
 

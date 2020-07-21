@@ -6,12 +6,12 @@ source:
  url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/Ska-Web-4.0.tar.gz
 
 requirements:
-  build:
+  host:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
   run:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
 test:
   # Perl 'use' tests
   imports:

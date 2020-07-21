@@ -18,11 +18,11 @@ build:
 requirements:
   build:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - patchelf
   run:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - patchelf
 
 

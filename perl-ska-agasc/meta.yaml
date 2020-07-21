@@ -9,15 +9,15 @@ build:
  number: 1
 
 requirements:
-  build:
+  host:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - perl-chandra-time
     - perl-app-env-ascds
     - perl-ska-classic
   run:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - perl-chandra-time
     - perl-app-env-ascds
     - perl-ska-classic

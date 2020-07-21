@@ -6,9 +6,9 @@ source:
   url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/skaclassic-0.6.tar.gz
 
 requirements:
-  build:
+  host:
     - perl
   run:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - chandra.time

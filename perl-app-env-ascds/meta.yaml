@@ -10,13 +10,13 @@ source:
 
 
 requirements:
-  build:
+  host:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - perl-cxc-sysarch
   run:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - perl-cxc-sysarch
 
 #test:
