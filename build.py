@@ -27,7 +27,9 @@ bonus_pkgs = [
     'perl-app-env-ascds',
     'perl-ska-convert',
     'perl-ska-agasc',
-    'perl-ska-web']
+    'perl-ska-web',
+    'perl-dbd-sybase',
+    'perl-tk']
 
 
 build_dir = os.path.join(args.build_root, "builds")
