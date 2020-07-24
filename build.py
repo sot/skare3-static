@@ -16,12 +16,12 @@ args = parser.parse_args()
 
 req_pkgs = [
     'perl-app-cpanminus',
-    'perl-core-deps']
+    'perl-core-deps',
+    'perl-ska-classic']
 
 bonus_pkgs = [
     'xtime',
     'perl-extended-deps',
-    'perl-ska-classic',
     'perl-chandra-time',
     'perl-cxc-sysarch',
     'perl-app-env-ascds',
