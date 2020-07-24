@@ -1,0 +1,35 @@
+package:
+  name: perl-tk
+  version: 804.035
+
+source:
+  url: https://cpan.metacpan.org/authors/id/S/SR/SREZIC/Tk-804.035.tar.gz
+
+
+requirements:
+  build:
+     - {{ compiler('c') }}
+     - {{ compiler('cxx') }}
+  host:
+     - perl
+     - xorg-libx11
+     - xorg-libxft
+     - xorg-xproto
+     - libx11-devel-cos7-x86_64
+     - libx11-cos7-x86_64
+     - libx11-common-cos7-x86_64
+     - zlib
+     - freetype
+     - libpng
+  run:
+     - perl
+     - xorg-libx11
+     - xorg-libxft
+     - xorg-xproto
+     - libx11-devel-cos7-x86_64
+     - libx11-cos7-x86_64
+     - libx11-common-cos7-x86_64
+     - zlib
+     - freetype
+     - libpng
+
