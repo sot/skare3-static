@@ -1,0 +1,33 @@
+This repository includes a build script and recipes to build
+"static" pieces of our ska3 environment.  By static, we just mean
+not in active development; we plan to build these basically once.
+
+Many of the pieces are being actively phased out, for example, the
+xtime code is used by the Chandra::Time Perl module, but modern
+applications are moving to Python and cxotime for time operations.
+The ability to use Inline::Python from Perl applications should allow
+other Perl applications to gradually shift from xtime.
+
+To build the minimum package set required to run starcheck (and run/debug
+task_schedule) from OSX, the default package set of:
+
+    'perl-app-cpanminus',
+    'perl-core-deps' # Includes Inline::Python
+    'perl-ska-classic' # Includes Quat
+
+should be sufficient.  To build a more complete Perl environment on Linux
+to support applications like Replan Central and splat.pl, the bonus packages
+should be built by supplying the "all" argument to build.py:
+
+bonus_pkgs = [
+    'xtime',
+    'perl-extended-deps', # Includes PDL and SSL libraries for Ska::Web
+    'perl-chandra-time', 
+    'perl-cxc-sysarch',
+    'perl-app-env-ascds',
+    'perl-ska-convert',
+    'perl-ska-agasc',
+    'perl-ska-web', # Used to fetch data in Replan Central
+    'perl-dbd-sybase', # Support Sybase
+    'perl-tk'] # Includes Tk for aca_movie or splat
+
