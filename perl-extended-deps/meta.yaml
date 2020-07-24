@@ -39,7 +39,6 @@ requirements:
    - openssl
    - blas
    - mkl_fft
-   - python
    - yaml
    - expat
    - zlib
