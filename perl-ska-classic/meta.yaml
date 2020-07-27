@@ -10,5 +10,3 @@ requirements:
     - perl
   run:
     - perl
-    - perl-extended-deps
-    - chandra.time
