@@ -13,7 +13,8 @@ source:
 requirements:
   host:
     - {{ compiler('cxx') }}
-    - perl
+    - conda-forge::perl # [linux]
+    - perl # [osx]
     - perl-extended-deps
     - xtime
   run:

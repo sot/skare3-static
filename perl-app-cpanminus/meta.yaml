@@ -7,7 +7,8 @@ source:
 
 requirements:
   host:
-     - perl
+     - perl # [osx]
+     - conda-forge::perl # [linux]
   run:
      - perl
 

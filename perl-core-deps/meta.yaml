@@ -11,7 +11,8 @@ requirements:
   host:
    - {{ compiler('c') }}
    - {{ compiler('cxx') }}
-   - perl =5.26.2
+   - conda-forge::perl =5.26.2 # [linux]
+   - perl =5.26.2 # [osx]
    - perl-app-cpanminus
    - expat
    - pkg-config

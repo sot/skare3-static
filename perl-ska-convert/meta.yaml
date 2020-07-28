@@ -10,7 +10,8 @@ build:
 
 requirements:
   host:
-    - perl
+    - conda-forge::perl # [linux]
+    - perl # [osx]
     - perl-chandra-time
     - perl-ska-classic
   run:

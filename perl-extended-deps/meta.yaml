@@ -12,7 +12,8 @@ requirements:
    - {{ compiler('c') }}
    - {{ compiler('cxx') }}
   host:
-   - perl =5.26.2
+   - conda-forge::perl =5.26.2 # [linux]
+   - perl =5.26.2 # [osx]
    - perl-app-cpanminus
    - perl-core-deps
    - expat

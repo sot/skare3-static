@@ -11,7 +11,8 @@ requirements:
      - {{ compiler('c') }}
      - {{ compiler('cxx') }}
   host:
-     - perl
+     - conda-forge::perl # [linux]
+     - perl # [osx]
      - xorg-libx11
      - xorg-libxft
      - xorg-xproto

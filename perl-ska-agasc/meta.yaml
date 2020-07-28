@@ -10,7 +10,8 @@ build:
 
 requirements:
   host:
-    - perl
+    - conda-forge::perl # [linux]
+    - perl # [osx]
     - perl-extended-deps
     - perl-chandra-time
     - perl-app-env-ascds
