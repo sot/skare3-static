@@ -3,11 +3,11 @@ package:
   version: 0.6
 
 source:
-  url: file:///proj/sot/ska/pkgs/skaclassic-0.6.tar.gz
+  url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/skaclassic-0.6.tar.gz
 
 requirements:
-  build:
-    - perl ==5.26.2
+  host:
+    - conda-forge::perl # [linux]
+    - perl # [osx]
   run:
-    - perl ==5.26.2
-
+    - perl

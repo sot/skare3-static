@@ -3,20 +3,19 @@ package:
   version: !!str 4.3
 
 source:
- url: file:///proj/sot/ska/pkgs/Ska-Convert-4.3.tar.gz 
+ url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/Ska-Convert-4.3.tar.gz
 
 build:
  number: 1
 
 requirements:
-  build:
-    - perl
-    - perl-core-deps
+  host:
+    - conda-forge::perl # [linux]
+    - perl # [osx]
     - perl-chandra-time
     - perl-ska-classic
   run:
     - perl
-    - perl-core-deps
     - perl-chandra-time
     - perl-ska-classic
 

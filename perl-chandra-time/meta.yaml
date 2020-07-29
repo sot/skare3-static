@@ -3,20 +3,23 @@ package:
   version: !!str 0.9.2
 
 source:
-  url: file:///proj/sot/ska/pkgs/Chandra-Time-0.9.2.tar.gz
-#  patches:
-   # List any patch files here
-   # - fix.patch
+  url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/Chandra-Time-0.9.2.tar.gz
+  patches:
+  # the env_gxx.patch sets the CC and LD to be the ENV{CXX) instead of 'g++'
+  # in the Makefile.PL
+    - env_gxx.patch
 
 
 requirements:
-  build:
-    - perl
-    - perl-core-deps
+  host:
+    - {{ compiler('cxx') }}
+    - conda-forge::perl # [linux]
+    - perl # [osx]
+    - perl-extended-deps
     - xtime
   run:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - xtime
 
 test:

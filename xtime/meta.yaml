@@ -5,14 +5,11 @@ package:
 source:
 # The source section specifies where the source code of the package is coming
 # from, it may be coming from a source tarball like:
-  url: file:///proj/sot/ska/pkgs/XTime-1.2.2.tar.gz
+  url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/XTime-1.2.2.tar.gz
 
 requirements:
-  build:
-    - gcc ==4.8.5 [linux]
-    - libgcc ==4.8.5 [linux]
-  run:
-    - libgcc ==4.8.5 [linux]
+   build:
+    - {{ compiler('cxx') }}
 
 build:
    number: 0

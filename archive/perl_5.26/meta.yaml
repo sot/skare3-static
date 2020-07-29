@@ -11,6 +11,7 @@ requirements:
     - pkg-config
     - gcc ==4.8.5 [linux]
     - libgcc ==4.8.5 [linux]
+    - make
   run:
     - pkg-config
     - libgcc ==4.8.5 [linux]

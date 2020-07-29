@@ -3,24 +3,26 @@ package:
   version: !!str 3.5.0
 
 source:
- url: file:///proj/sot/ska/pkgs/Ska-AGASC-3.5.0.tar.gz 
+ url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/Ska-AGASC-3.5.0.tar.gz
 
 build:
  number: 1
 
 requirements:
-  build:
-    - perl
-    - perl-core-deps
+  host:
+    - conda-forge::perl # [linux]
+    - perl # [osx]
+    - perl-extended-deps
     - perl-chandra-time
     - perl-app-env-ascds
     - perl-ska-classic
   run:
     - perl
-    - perl-core-deps
+    - perl-extended-deps
     - perl-chandra-time
     - perl-app-env-ascds
     - perl-ska-classic
+    - perl-ska-convert
 
 test:
   # Perl 'use' tests
