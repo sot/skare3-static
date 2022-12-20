@@ -19,7 +19,6 @@ ${CPANM} IO::File
 ${CPANM} Inline
 ${CPANM} Inline::C --installdeps
 ${CPANM} Inline::C --notest
-${CPANM} Inline::Python
 ${CPANM} Schedule::Cron --installdeps
 ${CPANM} Schedule::Cron --notest
 ${CPANM} YAML::Tiny
