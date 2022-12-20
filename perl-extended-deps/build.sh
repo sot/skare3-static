@@ -29,7 +29,6 @@ ${CPANM} Pegex --installdeps
 ${CPANM} Pegex --notest
 ${CPANM} Inline::C --installdeps
 ${CPANM} Inline::C --notest
-${CPANM} Inline::Python
 ${CPANM} Test::Simple
 ${CPANM} Convert::UU
 ${CPANM} File::Map
