@@ -7,7 +7,7 @@ source:
 
 requirements:
   host:
-    - conda-forge::perl # [linux]
+    - conda-forge::perl =5.26.2 # [linux]
     - perl # [osx]
     - perl-extended-deps
   run:
