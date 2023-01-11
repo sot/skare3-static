@@ -9,6 +9,7 @@ export LD=$CC
 
 CPANM="cpanm --from ${SRC_DIR} --mirror-index ${SRC_DIR}/modules/02packages.details.txt --self-contained "
 
+${CPANM} Module::Build --notest
 ${CPANM} Date::Tie
 ${CPANM} Date::Parse --notest
 ${CPANM} Mail::Filter
