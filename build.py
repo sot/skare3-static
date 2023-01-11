@@ -17,6 +17,7 @@ args = parser.parse_args()
 
 req_pkgs = [
     'perl-app-cpanminus',
+    'perl-io-tty',
     'perl-core-deps',
     'perl-ska-classic']
 
