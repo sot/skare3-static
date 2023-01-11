@@ -19,7 +19,6 @@ requirements:
    - perl-app-cpanminus
    - expat
    - pkg-config
-   - python ==3.10.8
    - yaml
    - zlib
    - zip
@@ -28,7 +27,6 @@ requirements:
    - perl-app-cpanminus
    - expat
    - pkg-config
-   - python
    - yaml
    - zlib
    - zip
