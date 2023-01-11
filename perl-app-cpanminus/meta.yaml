@@ -5,6 +5,9 @@ package:
 source:
   url: http://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7044.tar.gz
 
+build:
+  number: 1
+
 requirements:
   host:
      - conda-forge::perl =5.26.2 # [linux]

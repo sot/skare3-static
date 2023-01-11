@@ -5,6 +5,9 @@ package:
 source:
   url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/skaclassic-0.6.tar.gz
 
+build:
+  number: 1
+
 requirements:
   host:
     - conda-forge::perl =5.26.2 # [linux]

@@ -5,6 +5,8 @@ package:
 source:
   url: https://cpan.metacpan.org/authors/id/S/SR/SREZIC/Tk-804.035.tar.gz
 
+build:
+  number: 1
 
 requirements:
   build:

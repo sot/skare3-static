@@ -9,6 +9,8 @@ source:
   # in the Makefile.PL
     - env_gxx.patch
 
+build:
+  number: 1
 
 requirements:
   host:
