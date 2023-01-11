@@ -16,7 +16,6 @@ requirements:
    - perl-app-cpanminus
    - expat
    - pkg-config
-   - python
    - yaml
    - zlib
    - zip
@@ -25,7 +24,6 @@ requirements:
    - perl-app-cpanminus
    - expat
    - pkg-config
-   - python
    - yaml
    - zlib
    - zip
