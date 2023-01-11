@@ -14,6 +14,7 @@ requirements:
    - conda-forge::perl =5.26.2 # [linux]
    - perl =5.26.2 # [osx]
    - perl-app-cpanminus
+   - perl-io-tty
    - expat
    - pkg-config
    - yaml
@@ -22,6 +23,7 @@ requirements:
   run:
    - perl =5.26.2
    - perl-app-cpanminus
+   - perl-io-tty
    - expat
    - pkg-config
    - yaml
