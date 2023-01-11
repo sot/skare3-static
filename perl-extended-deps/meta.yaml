@@ -1,6 +1,6 @@
 package:
   name: perl-extended-deps
-  version: 0.3
+  version: 0.3.1
 
 source:
   url:  https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/cpan-core-0.3.tar.gz
@@ -24,7 +24,6 @@ requirements:
    - openssl
    - blas
    - mkl_fft
-   - python
    - yaml
    - zlib
    - zip
