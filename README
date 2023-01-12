@@ -8,6 +8,11 @@ applications are moving to Python and cxotime for time operations.
 See starcheck 14.0.1 for code to call Python from Perl using a client
 server model.
 
+For the prime installation I had attempted to modernize to get Inline::Python
+to work with Python 3.10.8 but did not have success with compiling on OSX.
+Inline::Python has been removed from perl-core-deps.
+There is an archived recipe that worked for Linux.
+
 To build the minimum package set required to run starcheck (and run/debug
 task_schedule) from OSX, the default package set of:
 
