@@ -1,0 +1,20 @@
+For ska3-prime, the core deps tar source package was updated manually to
+include updates for IO::Socket::SSL and Net::SSLeay. Updates were accomplished
+by just replacing the previous file versions in the CPAN source tarball and
+manually updating the cpan/modules/02packages.details.txt list of packages
+with the new versions.
+
+If one needs to do a full update, the strategy would be to modify the build.sh
+in this package to save a mirrored index of the cpanminus-fetched packages, tar
+that directory up, and then use that tarball as the new source package for the
+conda package.
+
+A modification at the top of build.sh would look like:
+
+CPAN_ARCHIVE=/tmp/mycpan
+mkdir -p ${CPAN_ARCHIVE}/modules
+wget https://www.cpan.org/modules/02packages.details.txt -O ${CPAN_ARCHIVE}/modules/02packages.details.txt
+CPANM="cpanm --mirror-index ${CPAN_ARCHIVE}/modules/02packages.details.txt \
+--self-contained --save-dists ${CPAN_ARCHIVE}"
+
+

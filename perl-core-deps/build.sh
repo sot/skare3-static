@@ -7,6 +7,16 @@ export EXPATLIBPATH=${PREFIX}/lib
 export EXPATINCPATH=${PREFIX}/include
 export LD=$CC
 
+# These modifications seemed necessary for the trickier package (Inline::Python) to build
+# but do not seem required now
+# if [ `uname` == Linux ]; then
+#     export LD=$CC
+# fi
+# if [ `uname` == Darwin ]; then
+#     export CFLAGS="${CFLAGS} -i sysroot ${CONDA_BUILD_SYSROOT}"
+# fi
+
+
 CPANM="cpanm --from ${SRC_DIR} --mirror-index ${SRC_DIR}/modules/02packages.details.txt --self-contained "
 
 ${CPANM} Module::Build --notest
