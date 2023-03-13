@@ -5,9 +5,12 @@ package:
 source:
  url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/Ska-Web-4.0.tar.gz
 
+build:
+  number: 1
+
 requirements:
   host:
-    - conda-forge::perl # [linux]
+    - conda-forge::perl =5.26.2 # [linux]
     - perl # [osx]
     - perl-extended-deps
   run:

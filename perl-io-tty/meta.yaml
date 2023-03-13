@@ -1,12 +1,15 @@
 package:
-  name: perl-core-deps
-  version: 0.3.1
+  name: perl-io-tty
+  version: !!str 1.12
 
 source:
-  url:  https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/cpan-core-0.3.tar.gz
+  url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/IO-Tty-1.12.tar.gz
 
-# On Linux, build seems to require conda-forge perl-5.26.2-h516909a_1006.tar.bz2,
-# 5.26.2 linux package from defaults seems broken as of 26-Jun-2020.
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 0
+
 requirements:
   host:
    - {{ compiler('c') }}
@@ -14,7 +17,6 @@ requirements:
    - conda-forge::perl =5.26.2 # [linux]
    - perl =5.26.2 # [osx]
    - perl-app-cpanminus
-   - perl-io-tty
    - expat
    - pkg-config
    - yaml
@@ -23,18 +25,9 @@ requirements:
   run:
    - perl =5.26.2
    - perl-app-cpanminus
-   - perl-io-tty
    - expat
    - pkg-config
    - yaml
    - zlib
    - zip
-build:
-   number: 0
-
-
-
-
-
-
 

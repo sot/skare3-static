@@ -9,11 +9,13 @@ source:
   # in the Makefile.PL
     - env_gxx.patch
 
+build:
+  number: 1
 
 requirements:
   host:
     - {{ compiler('cxx') }}
-    - conda-forge::perl # [linux]
+    - conda-forge::perl =5.26.2 # [linux]
     - perl # [osx]
     - perl-extended-deps
     - xtime
