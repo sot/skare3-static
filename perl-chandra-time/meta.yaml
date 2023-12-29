@@ -15,7 +15,7 @@ build:
 requirements:
   host:
     - {{ compiler('cxx') }}
-    - conda-forge::perl =5.26.2 # [linux]
+    - conda-forge::perl =5.32.1 # [linux]
     - perl # [osx]
     - perl-extended-deps
     - xtime

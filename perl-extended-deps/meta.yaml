@@ -1,9 +1,9 @@
 package:
   name: perl-extended-deps
-  version: 0.3.1
+  version: 0.4.0
 
 source:
-  url:  https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/cpan-core-0.3.tar.gz
+  url:  https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/cpan-core-0.4.tar.gz
 
 # On Linux, build seems to require conda-forge perl-5.26.2-h516909a_1006.tar.bz2,
 # 5.26.2 linux package from defaults seems broken as of 26-Jun-2020.
@@ -12,10 +12,10 @@ requirements:
    - {{ compiler('c') }}
    - {{ compiler('cxx') }}
   host:
-   - conda-forge::perl =5.26.2 # [linux]
-   - perl =5.26.2 # [osx]
+   - conda-forge::perl ==5.32.1
    - perl-app-cpanminus
-   - perl-core-deps
+   - perl-core-deps ==0.4.0
+   - perl-io-tty >=1.20
    - expat
    - pkg-config
    - libpng
@@ -25,13 +25,15 @@ requirements:
    - blas
    - mkl_fft
    - yaml
-   - zlib
+   - zlib ==1.2.13
+   - libzlib ==1.2.13
    - zip
    - cfitsio
   run:
    - perl
    - perl-app-cpanminus
-   - perl-core-deps
+   - perl-io-tty >=1.20
+   - perl-core-deps ==0.4.0
    - pkg-config
    - libpng
    - xtime
@@ -45,7 +47,7 @@ requirements:
    - zip
    - cfitsio
 build:
-   number: 0
+   number: 2
 
 
 

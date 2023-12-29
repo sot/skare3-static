@@ -1,18 +1,16 @@
 package:
   name: perl-app-cpanminus
-  version: 1.7044
+  version: 1.7047
 
 source:
-  url: http://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7044.tar.gz
+  url: http://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz
 
 build:
   number: 1
 
 requirements:
-  host:
-     - conda-forge::perl =5.26.2 # [linux]
-     - perl # [osx]
-
+  build:
+     - conda-forge::perl==5.32.1
   run:
-     - perl
+     - perl==5.32.1
 

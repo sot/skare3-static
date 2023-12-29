@@ -1,9 +1,9 @@
 package:
   name: perl-io-tty
-  version: !!str 1.12
+  version: !!str 1.20
 
 source:
-  url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/IO-Tty-1.12.tar.gz
+   url: https://cpan.metacpan.org/authors/id/T/TO/TODDR/IO-Tty-1.20.tar.gz
 
 build:
   # If this is a new build for the same version, increment the build
@@ -11,23 +11,23 @@ build:
   number: 0
 
 requirements:
-  host:
+  build:
    - {{ compiler('c') }}
    - {{ compiler('cxx') }}
-   - conda-forge::perl =5.26.2 # [linux]
-   - perl =5.26.2 # [osx]
-   - perl-app-cpanminus
+  host:
+   - conda-forge::perl ==5.32.1
+   - conda-forge::perl-app-cpanminus
    - expat
    - pkg-config
    - yaml
-   - zlib
+   - zlib ==1.2.13
    - zip
   run:
-   - perl =5.26.2
+   - perl
    - perl-app-cpanminus
    - expat
    - pkg-config
    - yaml
-   - zlib
+   - zlib ==1.2.13
    - zip
 

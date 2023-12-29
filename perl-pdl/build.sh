@@ -1,13 +1,6 @@
 #!/bin/bash
 
-# From https://github.com/conda/conda-build/issues/4392#issuecomment-1370281802
-if [[ $target_platform == osx-* ]]; then
-    for toolname in "otool" "install_name_tool"; do
-        tool=$(find "${BUILD_PREFIX}/bin/" -name "*apple*-$toolname")
-        mv "${tool}" "${tool}.bak"
-        ln -s "/Library/Developer/CommandLineTools/usr/bin/${toolname}" "$tool"
-    done
-fi
+
 
 # If it has Build.PL use that, otherwise use Makefile.PL
 if [ -f Build.PL ]; then

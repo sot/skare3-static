@@ -10,14 +10,16 @@ build:
 
 requirements:
   host:
-    - conda-forge::perl =5.26.2 # [linux]
+    - conda-forge::perl =5.32.1 # [linux]
     - perl # [osx]
     - perl-extended-deps
+    - perl-pdl
     - perl-chandra-time
     - perl-app-env-ascds
     - perl-ska-classic
   run:
     - perl
+    - perl-pdl
     - perl-extended-deps
     - perl-chandra-time
     - perl-app-env-ascds

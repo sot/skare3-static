@@ -24,6 +24,8 @@ req_pkgs = [
 bonus_pkgs = [
     'xtime',
     'perl-extended-deps',
+    'perl-pdl',
+    'perl-astro-fits-cfitsio-simple',
     'perl-chandra-time',
     'perl-cxc-sysarch',
     'perl-app-env-ascds',
@@ -49,15 +51,14 @@ elif args.package == 'all':
 else:
     pkgs = [args.package]
 
+
 for pkg in pkgs:
     cmd = ["conda", "build", "-c", "conda-forge",
            "--use-local",
-           "--perl", "5.26.2", "--python", "3.10", "--croot", build_dir, pkg]
+           "--perl", "5.32.1", "--python", "3.11", "--numpy", "1.26.4", "--croot", build_dir, pkg]
 
     # Need conda-forge perl on Linux.  Would need to set up a local repo
     # to enforce just that package.  Adding conda-forge after defaults seems
     # to be working on Linux without taking that step (strict-channel-priority
     # does not seem to be an option in conda-build).
-    if system_name == 'Linux':
-        cmd.extend(["-c", "conda-forge"])
     subprocess.check_call(cmd)

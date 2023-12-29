@@ -10,7 +10,6 @@ build:
 
 requirements:
   host:
-    - conda-forge::perl =5.26.2 # [linux]
-    - perl # [osx]
+    - conda-forge::perl =5.32.1
   run:
     - perl

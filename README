@@ -16,7 +16,6 @@ There is an archived recipe that worked for Linux.
 To build the minimum package set required to run starcheck (and run/debug
 task_schedule) from OSX, the default package set of:
 
-    'perl-app-cpanminus',
     'perl-core-deps'
     'perl-ska-classic' # Includes Quat
 

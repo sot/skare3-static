@@ -19,11 +19,11 @@ build:
 requirements:
   host:
     - {{ compiler('c') }}
-    - conda-forge::perl =5.26.2 # [linux]
+    - conda-forge::perl =5.32.1 # [linux]
     - perl # [osx]
     - perl-extended-deps
   run:
-    - perl =5.26.2
+    - perl =5.32.1
     - perl-extended-deps
 
 
