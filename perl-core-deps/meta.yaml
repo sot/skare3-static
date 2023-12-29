@@ -8,12 +8,13 @@ source:
 # On Linux, build seems to require conda-forge perl-5.26.2-h516909a_1006.tar.bz2,
 # 5.26.2 linux package from defaults seems broken as of 26-Jun-2020.
 requirements:
-  host:
+  build:
    - {{ compiler('c') }}
    - {{ compiler('cxx') }}
+  host:
    - conda-forge::perl =5.26.2 # [linux]
-   - perl =5.26.2 # [osx]
-   - perl-app-cpanminus
+   - conda-forge::perl # [osx]
+   - conda-forge::perl-app-cpanminus
    - perl-io-tty
    - expat
    - pkg-config
@@ -21,7 +22,7 @@ requirements:
    - zlib
    - zip
   run:
-   - perl =5.26.2
+   - perl
    - perl-app-cpanminus
    - perl-io-tty
    - expat

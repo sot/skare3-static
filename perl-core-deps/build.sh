@@ -16,6 +16,13 @@ export LD=$CC
 #     export CFLAGS="${CFLAGS} -i sysroot ${CONDA_BUILD_SYSROOT}"
 # fi
 
+if [[ $target_platform == osx-* ]]; then
+    for toolname in "otool" "install_name_tool"; do
+        tool=$(find "${BUILD_PREFIX}/bin/" -name "*apple*-$toolname")
+        mv "${tool}" "${tool}.bak"
+        ln -s "/Library/Developer/CommandLineTools/usr/bin/${toolname}" "$tool"
+    done
+fi
 
 CPANM="cpanm --from ${SRC_DIR} --mirror-index ${SRC_DIR}/modules/02packages.details.txt --self-contained "
 

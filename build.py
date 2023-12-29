@@ -52,7 +52,7 @@ else:
 for pkg in pkgs:
     cmd = ["conda", "build", "-c", "conda-forge",
            "--use-local",
-           "--perl", "5.26.2", "--python", "3.10", "--croot", build_dir, pkg]
+           "--perl", "5.32.1", "--python", "3.11", "--numpy", "1.26.2", "--croot", build_dir, pkg]
 
     # Need conda-forge perl on Linux.  Would need to set up a local repo
     # to enforce just that package.  Adding conda-forge after defaults seems
