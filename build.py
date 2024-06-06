@@ -51,7 +51,6 @@ bonus_pkgs = [
 
 build_dir = os.path.join(args.build_root, "builds")
 
-system_name = platform.uname().system
 
 # If a package is requested, do that, else everything.
 if args.package is None:
