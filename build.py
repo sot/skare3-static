@@ -8,18 +8,31 @@ import platform
 parser = argparse.ArgumentParser(description="Build skare3 Perl packages.")
 
 parser.add_argument("package", type=str, nargs="?",
-                    help="Package to build.  All updated packages will be"
-                         " built if no package supplied")
+                    help="Package to build. With no argument, only required packages "
+                    "are built.  With 'all' argument, required and bonus packages build "
+                    "on linux.")
 parser.add_argument("--build-root", default=".", type=str,
                     help="Path to root directory for output conda build packages."
-                         "Default: '.'")
+                         "Default: '.' (makes 'builds' dir)")
 args = parser.parse_args()
 
-req_pkgs = [
-    'perl-app-cpanminus',
-    'perl-io-tty',
-    'perl-core-deps',
-    'perl-ska-classic']
+req_pkgs = []
+
+system_name = platform.uname().system
+machine = platform.uname().machine
+
+# Linux seems to need a built cpanminus for perl-extended-deps to work
+if system_name == 'Linux':
+    req_pkgs.append('perl-app-cpanminus')
+
+# perl-io-tty won't build on mac x86_64 but we want to build it on the other two
+# platforms
+if (system_name == 'Linux') or ((system_name == 'Darwin') and (machine == 'arm64')):
+    req_pkgs.append('perl-io-tty')
+
+# For all platforms, these two are needed
+req_pkgs += ['perl-core-deps',
+             'perl-ska-classic']
 
 bonus_pkgs = [
     'xtime',
@@ -62,3 +75,4 @@ for pkg in pkgs:
     # to be working on Linux without taking that step (strict-channel-priority
     # does not seem to be an option in conda-build).
     subprocess.check_call(cmd)
+
