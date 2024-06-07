@@ -1,0 +1,11 @@
+--- builds/perl-pdl_1716691567185/work/perldl.conf	2023-03-31 12:25:25.000000000 -0400
++++ perldl.conf	2024-05-25 22:57:44.962770388 -0400
+@@ -97,7 +97,7 @@
+ # false -> don't use
+ # true -> force use
+ 
+-        WITH_GD => undef,      # Leave it up to PDL to decide
++        WITH_GD => false,      # Leave it up to PDL to decide
+         GD_LIBS => undef,
+         GD_INC => undef,
+         GD_DEFINE => '',       # If anything needs to be defined.

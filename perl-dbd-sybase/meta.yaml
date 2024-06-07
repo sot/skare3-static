@@ -1,14 +1,10 @@
 package:
   name: perl-dbd-sybase
-  version: !!str 1.15
+  version: !!str 1.24
 
 source:
-  url: file:///proj/sot/ska/pkgs/DBD-Sybase-1.15.tar.gz
-  #url: http://cpan.metacpan.org/authors/id/M/ME/MEWP/DBD-Sybase-1.15.tar.gz
-  md5: d76f09f9a25896fd879ef89a98748708
-  patches:
-   # List any patch files here
-    - config.patch
+  url: http://cpan.metacpan.org/authors/id/M/ME/MEWP/DBD-Sybase-1.24.tar.gz
+
 
 build:
   # If this is a new build for the same version, increment the build
@@ -19,11 +15,11 @@ build:
 requirements:
   host:
     - {{ compiler('c') }}
-    - conda-forge::perl =5.26.2 # [linux]
+    - conda-forge::perl =5.32.1 # [linux]
     - perl # [osx]
     - perl-extended-deps
   run:
-    - perl =5.26.2
+    - perl =5.32.1
     - perl-extended-deps
 
 

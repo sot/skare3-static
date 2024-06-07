@@ -11,6 +11,13 @@ export LD=$CC
 
 CPANM="cpanm --from ${SRC_DIR} --mirror-index ${SRC_DIR}/modules/02packages.details.txt --self-contained "
 
+${CPANM} ExtUtils::MakeMaker::CPANfile
+${CPANM} Time::Out
+${CPANM} Schedule::Cron --installdeps
+${CPANM} Schedule::Cron --notest
+${CPANM} YAML
+${CPANM} HTML::TableExtract
+
 ${CPANM} File::Map
 ${CPANM} Module::Install
 ${CPANM} ExtUtils::PkgConfig
@@ -23,10 +30,7 @@ ${CPANM} IO::Tty --configure-timeout 120
 ${CPANM} Parse::RecDescent
 ${CPANM} Term::ReadLine::Perl --notest
 
-${CPANM} JSON::PP
-${CPANM} Inline
-${CPANM} Pegex --installdeps
-${CPANM} Pegex --notest
+${CPANM} Inline --notest
 ${CPANM} Inline::C --installdeps
 ${CPANM} Inline::C --notest
 ${CPANM} Test::Simple
@@ -37,7 +41,6 @@ ${CPANM} List::MoreUtils
 ${CPANM} Module::Compile
 ${CPANM} Test::Deep
 ${CPANM} Test::Exception
-${CPANM} Test::Warn
 
 ${CPANM} URI
 ${CPANM} Net::SSLeay
@@ -53,7 +56,7 @@ ${CPANM} Data::DumpXML
 ${CPANM} CGI
 
 ${CPANM} Term::ReadKey
-${CPANM} JSON
+
 ${CPANM} Carp::Clan
 ${CPANM} Bit::Vector
 ${CPANM} Tree::DAG_Node
@@ -65,7 +68,6 @@ ${CPANM} IO::File
 ${CPANM} Cwd
 ${CPANM} Readonly
 ${CPANM} File::chdir
-${CPANM} YAML::Tiny
 ${CPANM} Test::Simple
 ${CPANM} File::Slurp
 ${CPANM} IO::String
@@ -76,25 +78,19 @@ ${CPANM} IO::Compress::Zlib::Constants
 ${CPANM} Compress::Zlib
 ${CPANM} Archive::Zip --installdeps
 ${CPANM} Archive::Zip --notest
-${CPANM} Tie::IxHash
 ${CPANM} Clone
 ${CPANM} Class::MakeMethods --installdeps
 ${CPANM} Class::MakeMethods --notest
 
 ${CPANM} Class::Accessor
-${CPANM} Config::General
 ${CPANM} Hash::Merge
-${CPANM} YAML
-${CPANM} Expect
-${CPANM} Expect::Simple
 ${CPANM} Params::Validate
 ${CPANM} Env::Path
 ${CPANM} Time::JulianDay
 ${CPANM} Time::Local
 ${CPANM} File::MMagic
-${CPANM} Module::Build
 ${CPANM} version
-${CPANM} Sub::Uplevel
+
 ${CPANM} Test::Exception
 ${CPANM} Text::TabularDisplay
 ${CPANM} Text::Glob
@@ -106,17 +102,17 @@ ${CPANM} HTML::Table
 ${CPANM} IO::Stringy
 ${CPANM} Decision::Depends
 ${CPANM} Regexp::Common
-${CPANM} Date::Tie
 ${CPANM} Pod::Usage
 ${CPANM} Pod::Help
-${CPANM} Time::Out
+
+
 ${CPANM} Shell::GetEnv --notest
 ${CPANM} Module::Find
 ${CPANM} IPC::System::Simple
 ${CPANM} Capture::Tiny
 ${CPANM} Config::PFiles::Path
+
 ${CPANM} App::Env
-${CPANM} Schedule::Cron --notest
 ${CPANM} HTML::TreeBuilder
 ${CPANM} Text::RecordParser
 ${CPANM} POSIX::strptime
@@ -131,13 +127,13 @@ ${CPANM} DBI
 ${CPANM} DBD::SQLite
 ${CPANM} Astro::FITS::CFITSIO
 ${CPANM} Astro::FITS::Header
-${CPANM} PDL
+${CPANM} PDL --installdeps
 ${CPANM} Astro::FITS::CFITSIO::CheckStatus
-${CPANM} Astro::FITS::CFITSIO::Simple
+${CPANM} Class::MethodMaker
+${CPANM} Term::ProgressBar
 
 # Remove cpan work dirs
 rm -rf $PERL_CPANM_HOME
-
 
 
 

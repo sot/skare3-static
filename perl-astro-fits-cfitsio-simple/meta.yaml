@@ -1,0 +1,34 @@
+package:
+  name: perl-astro-fits-cfitsio-simple
+  version: 0.20
+
+source:
+  url:  https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/cpan-core-0.4.tar.gz
+
+# On Linux, build seems to require conda-forge perl-5.26.2-h516909a_1006.tar.bz2,
+# 5.26.2 linux package from defaults seems broken as of 26-Jun-2020.
+requirements:
+#  build:
+#   - {{ compiler('c') }}
+#   - {{ compiler('cxx') }}
+  host:
+   - conda-forge::perl ==5.32.1
+   - conda-forge::perl-app-cpanminus
+   - perl-extended-deps ==0.4.0
+   - perl-io-tty
+   - perl-pdl
+  run:
+   - perl
+   - perl-app-cpanminus
+   - perl-io-tty
+   - perl-extended-deps ==0.4.0
+   - perl-pdl
+build:
+   number: 0
+
+
+
+
+
+
+
