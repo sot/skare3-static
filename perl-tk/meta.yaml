@@ -1,12 +1,12 @@
 package:
   name: perl-tk
-  version: 804.035
+  version: "804.036"
 
 source:
-  url: https://cpan.metacpan.org/authors/id/S/SR/SREZIC/Tk-804.035.tar.gz
+  url: https://cpan.metacpan.org/authors/id/S/SR/SREZIC/Tk-804.036.tar.gz
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -18,9 +18,14 @@ requirements:
      - xorg-libx11
      - xorg-libxft
      - xorg-xproto
+     - libcxxabi
+     - libcxx
+     - libcxx-devel
      - libx11-devel-cos7-x86_64
      - libx11-cos7-x86_64
      - libx11-common-cos7-x86_64
+     - libjpeg-turbo-cos7-x86_64
+     - perl-extended-deps ==0.5.0
      - zlib
      - freetype
      - libpng
@@ -32,7 +37,9 @@ requirements:
      - libx11-devel-cos7-x86_64
      - libx11-cos7-x86_64
      - libx11-common-cos7-x86_64
+     - libjpeg-turbo-cos7-x86_64
+     - perl-extended-deps ==0.5.0
      - zlib
      - freetype
      - libpng
-
+     - libzlib

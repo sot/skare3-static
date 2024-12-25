@@ -1,15 +1,15 @@
 package:
-  name: perl-astro-fits-cfitsio-simple
-  version: "0.20"
+  name: perl-astro-fits-cfitsio-checkstatus
+  version: "0.03"
 
 source:
-  url: https://cpan.metacpan.org/authors/id/D/DJ/DJERIUS/Astro-FITS-CFITSIO-Simple-0.20.tar.gz
-  #  patches:
+  url: https://cpan.metacpan.org/authors/id/D/DJ/DJERIUS/Astro-FITS-CFITSIO-CheckStatus-0.03.tar.gz
+   #  patches:
    # List any patch files here
    # - fix.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -28,7 +28,6 @@ requirements:
     - perl-alien-cfitsio ==4.4.0.2
     - perl-astro-fits-header
     - perl-astro-fits-cfitsio
-
 #test:
 #  # Perl 'use' tests
 #  imports:

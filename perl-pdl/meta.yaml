@@ -8,7 +8,7 @@ source:
     - no_gd.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -16,6 +16,14 @@ requirements:
      - {{ compiler('cxx') }}
      - conda-forge::perl==5.32.1 
      - perl-extended-deps
+     - perl-alien-cfitsio
+     - perl-astro-fits-cfitsio
+     - perl-astro-fits-header
+     - perl-astro-fits-cfitsio-checkstatus
   run:
      - perl==5.32.1
      - perl-extended-deps
+     - perl-alien-cfitsio
+     - perl-astro-fits-cfitsio
+     - perl-astro-fits-header
+     - perl-astro-fits-cfitsio-checkstatus

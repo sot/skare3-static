@@ -1,26 +1,29 @@
 package:
-  name: perl-app-env-ascds
-  version: !!str 0.04
+  name: perl-astro-fits-cfitsio
+  version: "1.18"
 
 source:
-  url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/App-Env-ASCDS-0.04_ska.tar.gz
-#  patches:
+  url: https://cpan.metacpan.org/authors/id/P/PR/PRATZLAFF/Astro-FITS-CFITSIO-1.18.tar.gz
+  #  patches:
    # List any patch files here
    # - fix.patch
 
 build:
-  number: 2
+  number: 0
 
 requirements:
+  build:
+     - {{ compiler('c') }}
+     - {{ compiler('cxx') }}
   host:
     - conda-forge::perl =5.32.1 # [linux]
     - perl # [osx]
-    - perl-extended-deps
-    - perl-cxc-sysarch
+    - perl-extended-deps ==0.5.0
+    - perl-alien-cfitsio ==4.4.0.2
   run:
     - perl
-    - perl-extended-deps
-    - perl-cxc-sysarch
+    - perl-extended-deps ==0.5.0
+    - perl-alien-cfitsio ==4.4.0.2
 
 #test:
 #  # Perl 'use' tests

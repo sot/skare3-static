@@ -43,7 +43,7 @@ ${CPANM} Test::Deep
 ${CPANM} Test::Exception
 
 ${CPANM} URI
-${CPANM} Net::SSLeay
+${CPANM} Net::SSLeay --notest
 ${CPANM} IO::Socket::SSL
 ${CPANM} Time::Zone --installdeps
 ${CPANM} Time::Zone --notest
@@ -125,12 +125,10 @@ ${CPANM} HTML::FormatText
 ${CPANM} Module::Install
 ${CPANM} DBI
 ${CPANM} DBD::SQLite
-${CPANM} Astro::FITS::CFITSIO
-${CPANM} Astro::FITS::Header
-${CPANM} PDL --installdeps
-${CPANM} Astro::FITS::CFITSIO::CheckStatus
 ${CPANM} Class::MethodMaker
 ${CPANM} Term::ProgressBar
+${CPANM} Alien::CFITSIO --installdeps
+${CPANM} PDL --installdeps
 
 # Remove cpan work dirs
 rm -rf $PERL_CPANM_HOME
