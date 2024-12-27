@@ -3,7 +3,7 @@
 # Make sure this goes in site
 perl Makefile.PL INSTALLDIRS=site X11INC=${PREFIX}/include X11LIB=${PREFIX}/lib
 make
-#make test
+make test
 make install
 
 
