@@ -17,10 +17,10 @@ requirements:
     - {{ compiler('c') }}
     - conda-forge::perl =5.32.1 # [linux]
     - perl # [osx]
-    - perl-extended-deps
+    - perl-extended-deps ==0.5.0
   run:
     - perl =5.32.1
-    - perl-extended-deps
+    - perl-extended-deps ==0.5.0
 
 
 #test:
