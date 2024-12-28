@@ -66,7 +66,7 @@ else:
 
 
 for pkg in pkgs:
-    cmd = ["conda", "build", "-c", "file://proj/sot/ska/www/ASPECT/ska3-conda/twelve", "-c", "conda-forge"]
+    cmd = ["conda", "build", "--override-channels", "-c", "file://proj/sot/ska/www/ASPECT/ska3-conda/twelve", "-c", "conda-forge"]
     if (system_name == 'Linux'):
         cmd.extend(["--prefix-length", "240"])
     cmd.extend(["--use-local",
