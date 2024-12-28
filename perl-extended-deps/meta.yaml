@@ -14,7 +14,7 @@ requirements:
   host:
    - conda-forge::perl ==5.32.1
    - perl-app-cpanminus
-   - perl-core-deps ==0.4.0
+   - perl-core-deps ==0.5.0
    - perl-io-tty >=1.20
    - expat
    - pkg-config
@@ -33,7 +33,7 @@ requirements:
    - perl
    - perl-app-cpanminus
    - perl-io-tty >=1.20
-   - perl-core-deps ==0.4.0
+   - perl-core-deps ==0.5.0
    - pkg-config
    - libpng
    - xtime

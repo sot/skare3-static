@@ -38,6 +38,7 @@ bonus_pkgs = [
     'xtime',
     'perl-extended-deps',
     'perl-pdl',
+    'perl-astro-fits-cfitsio',
     'perl-astro-fits-cfitsio-simple',
     'perl-chandra-time',
     'perl-cxc-sysarch',
@@ -65,9 +66,10 @@ else:
 
 
 for pkg in pkgs:
-    cmd = ["conda", "build", "-c", "conda-forge",
+    cmd = ["conda", "build", "-c", "file://proj/sot/ska/www/ASPECT/ska3-conda/twelve", "-c", "conda-forge",
+           "--prefix-length", "240",
            "--use-local",
-           "--perl", "5.32.1", "--python", "3.11", "--numpy", "1.26.4", "--croot", build_dir, pkg]
+           "--perl", "5.32.1", "--python", "3.12", "--numpy", "1.26.4", "--croot", build_dir, pkg]
 
     # Need conda-forge perl on Linux.  Would need to set up a local repo
     # to enforce just that package.  Adding conda-forge after defaults seems
