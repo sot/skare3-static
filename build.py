@@ -67,8 +67,13 @@ else:
 
 for pkg in pkgs:
     cmd = ["conda", "build", "--override-channels", "-c", "file://proj/sot/ska/www/ASPECT/ska3-conda/twelve", "-c", "conda-forge"]
+
+    # The standard prefix length is 255.  It looks like at least a few of the perl packages fail to build
+    # (astro::fits::header, astro::fits::cfitsio::simple) at that length but are OK at 240 - so this
+    # just builds all the linux versions at 240.  If that is a problem we can rethink.
     if (system_name == 'Linux'):
         cmd.extend(["--prefix-length", "240"])
+
     cmd.extend(["--use-local",
            "--perl", "5.32.1", "--python", "3.12", "--numpy", "1.26.4", "--croot", build_dir, pkg])
 
