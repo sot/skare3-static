@@ -66,7 +66,7 @@ else:
 
 
 for pkg in pkgs:
-    cmd = ["conda", "build", "--override-channels", "-c", "file://proj/sot/ska/www/ASPECT/ska3-conda/twelve", "-c", "conda-forge"]
+    cmd = ["conda", "build", "--override-channels", "-c", "https://icxc.cfa.harvard.edu/aspect/ska3-conda/twelve", "-c", "conda-forge"]
 
     # The standard prefix length is 255.  It looks like at least a few of the perl packages fail to build
     # (astro::fits::header, astro::fits::cfitsio::simple) at that length but are OK at 240 - so this
