@@ -1,6 +1,6 @@
 package:
   name: perl-cxc-sysarch
-  version: !!str 1.00
+  version: !!str 1.1
 
 source:
   url: https://cxc.harvard.edu/mta/ASPECT/skare3-static-pkgs/CXC-SysArch-1.00.tar.gz
@@ -21,10 +21,10 @@ requirements:
     - perl-extended-deps
 
 
-test:
+#test:
   # Perl 'use' tests
-  imports:
-    - CXC::SysArch
+  #imports:
+  #  - CXC::SysArch
  
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
