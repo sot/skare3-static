@@ -66,7 +66,7 @@ else:
 
 
 for pkg in pkgs:
-    cmd = ["conda", "build", "--override-channels", "-c", "https://icxc.cfa.harvard.edu/aspect/ska3-conda/twelve", "-c", "conda-forge"]
+    cmd = ["conda", "build", "--override-channels", "-c", "https://icxc.cfa.harvard.edu/aspect/ska3-conda/flight", "-c", "conda-forge"]
 
     # The standard prefix length is 255.  It looks like at least a few of the perl packages fail to build
     # (astro::fits::header, astro::fits::cfitsio::simple) at that length but are OK at 240 - so this
@@ -75,7 +75,7 @@ for pkg in pkgs:
         cmd.extend(["--prefix-length", "240"])
 
     cmd.extend(["--use-local",
-           "--perl", "5.32.1", "--python", "3.12", "--numpy", "1.26.4", "--croot", build_dir, pkg])
+           "--perl", "5.32.1", "--python", "3.13", "--numpy", "2.3.5", "--croot", build_dir, pkg])
 
     # Need conda-forge perl on Linux.  Would need to set up a local repo
     # to enforce just that package.  Adding conda-forge after defaults seems
