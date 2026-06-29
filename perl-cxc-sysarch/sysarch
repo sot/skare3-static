@@ -406,6 +406,7 @@ case "$OS" in
 		*Enterprise*) os_vendor=RHEL ;;
 		*Red\ Hat*  ) os_vendor=RH ;;
 		*CentOS*    ) os_vendor=CentOS ;;
+                *Rocky\ Linux*) os_vendor=Rocky ;;
 	    esac
 
 	    os_version=${_tmp##*elease }
